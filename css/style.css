@@ -339,83 +339,94 @@ th {
 /* line 11, ../sass/style.scss */
 body {
   font-family: 'Lato';
+  color: #8895A6;
 }
-/* line 13, ../sass/style.scss */
+/* line 14, ../sass/style.scss */
 body a {
   text-decoration: none;
+  color: #E4F5FC;
 }
 
-/* line 20, ../sass/style.scss */
+/* line 22, ../sass/style.scss */
 .header_bg {
   background-image: url("../images/bg_img_science.jpg");
   repeat: no-repeat;
+  width: 100%;
   background-size: cover;
   -webkit-background-size: cover;
   -o-background-size: cover;
   -ms-background-size: cover;
   -moz-background-size: cover;
   position: relative;
-  min-height: 608px;
+  height: 100vh;
+}
+/* line 33, ../sass/style.scss */
+.header_bg .logo {
+  font-size: 250%;
+}
+/* line 36, ../sass/style.scss */
+.header_bg .logo a:hover {
+  text-decoration: none;
+  color: #8895A6;
 }
 
-/* line 34, ../sass/style.scss */
+/* line 47, ../sass/style.scss */
 .bg-menu {
-  background-color: #1c4388;
   height: 64px;
   display: flex;
   align-items: center;
   justify-content: center;
 }
 
-/* line 41, ../sass/style.scss */
+/* line 53, ../sass/style.scss */
 .menu {
-  background-color: #1C4388;
+  background-color: transparent;
   display: inline-block;
   margin-top: 10px;
 }
-/* line 46, ../sass/style.scss */
+/* line 58, ../sass/style.scss */
 .menu .current-menu-item a,
 .menu .current_page_item a {
   text-decoration: underline;
-  color: #f3f7f6;
+  color: #8895A6;
   font-size: 15.6px;
   font-weight: 500;
 }
-/* line 55, ../sass/style.scss */
+/* line 67, ../sass/style.scss */
 .menu li {
   float: left;
 }
-/* line 57, ../sass/style.scss */
+/* line 69, ../sass/style.scss */
 .menu li a {
   margin-left: 40px;
   font-family: 'Lato';
-  color: #f3f7f6;
+  color: #8895A6;
   font-size: 15.6px;
   font-weight: 500;
 }
-/* line 63, ../sass/style.scss */
+/* line 75, ../sass/style.scss */
 .menu li a:first-of-child {
   margin-left: 0;
 }
-/* line 66, ../sass/style.scss */
+/* line 78, ../sass/style.scss */
 .menu li a:hover {
   color: #fff;
   text-decoration: underline;
 }
 
-/* line 77, ../sass/style.scss */
+/* line 89, ../sass/style.scss */
 .site-footer {
   background-color: #000;
   height: 240px;
   color: #fff;
 }
-/* line 81, ../sass/style.scss */
+/* line 93, ../sass/style.scss */
 .site-footer p {
   margin-left: auto;
   margin-right: auto;
   width: 59em;
 }
-/* line 86, ../sass/style.scss */
+/* line 98, ../sass/style.scss */
 .site-footer .copyright {
   padding-top: 20px;
   font-family: 'Lato';
@@ -424,18 +435,18 @@ body a {
   line-height: 19px;
 }
 
-/* line 94, ../sass/style.scss */
+/* line 106, ../sass/style.scss */
 .footer_image_folder {
   padding-top: 34px;
   padding-bottom: 20px;
 }
 
-/* line 102, ../sass/style.scss */
+/* line 114, ../sass/style.scss */
 article.page h2 {
   font-size: 200%;
 }
 
-/* line 109, ../sass/style.scss */
+/* line 121, ../sass/style.scss */
 .learnmore_bg {
   min-height: 416px;
   background-image: url("images/LearnmoreBG.png");
@@ -445,7 +456,7 @@ article.page h2 {
   align-items: center;
   justify-content: center;
 }
-/* line 117, ../sass/style.scss */
+/* line 129, ../sass/style.scss */
 .learnmore_bg h1 {
   color: #f3f7f6;
   font-size: 45.35px;
@@ -453,14 +464,14 @@ article.page h2 {
   text-transform: uppercase;
   padding-top: 35px;
 }
-/* line 124, ../sass/style.scss */
+/* line 136, ../sass/style.scss */
 .learnmore_bg h3 {
   color: #f3f7f6;
   font-size: 24.94px;
   font-weight: 400;
   padding-bottom: 20px;
 }
-/* line 130, ../sass/style.scss */
+/* line 142, ../sass/style.scss */
 .learnmore_bg button {
   color: #f3f7f6;
   font-size: 17.01px;
@@ -471,11 +482,11 @@ article.page h2 {
   background: transparent;
   padding: 20px 30px;
 }
-/* line 140, ../sass/style.scss */
+/* line 152, ../sass/style.scss */
 .learnmore_bg button:hover p {
   text-decoration: underline;
 }
-/* line 144, ../sass/style.scss */
+/* line 156, ../sass/style.scss */
 .learnmore_bg button p {
   text-transform: uppercase;
   margin-left: auto;
@@ -484,7 +495,7 @@ article.page h2 {
   line-height: 20px;
 }
 
-/* line 155, ../sass/style.scss */
+/* line 167, ../sass/style.scss */
 .benefits h2 {
   font-family: 'Lato';
   color: #1e4388;
@@ -494,14 +505,14 @@ article.page h2 {
   padding: 50px 0;
 }
 
-/* line 168, ../sass/style.scss */
+/* line 180, ../sass/style.scss */
 .kiio-widget .textwidget {
   margin-left: auto;
   margin-right: auto;
   width: 10em;
   margin-bottom: 50px;
 }
-/* line 175, ../sass/style.scss */
+/* line 187, ../sass/style.scss */
 .kiio-widget .widget-item h4 {
   font-family: 'Lato';
   color: #1e4388;
@@ -510,7 +521,7 @@ article.page h2 {
   margin-bottom: 25px;
 }
 
-/* line 184, ../sass/style.scss */
+/* line 196, ../sass/style.scss */
 .image-folder {
   margin: auto;
   display: flex;
@@ -524,7 +535,7 @@ article.page h2 {
   margin-bottom: 30px;
 }
 
-/* line 199, ../sass/style.scss */
+/* line 211, ../sass/style.scss */
 .achievement-bg {
   background-color: #174187;
   height: 277px;

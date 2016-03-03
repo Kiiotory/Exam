@@ -8,10 +8,12 @@
 @import url(https://fonts.googleapis.com/css?family=Lato);
 //*********************************************************
 //*********************************************************
-body{;
+body{
 	font-family: 'Lato';
+	color: #8895A6;
 	a{
 		text-decoration: none;
+		color: #E4F5FC;
 	}
 }
 //*****************************************
@@ -20,19 +22,29 @@ body{;
 .header_bg{
 	background-image: url("../images/bg_img_science.jpg");
 	repeat: no-repeat;
+	width: 100%;
 	background-size:cover;
 	-webkit-background-size: cover;
 	-o-background-size: cover;
 	-ms-background-size: cover;
 	-moz-background-size: cover;
 	position: relative;
-	min-height: 608px;
+	height: 100vh;
+	.logo{
+		font-size: 250%;
+		a{
+			&:hover{
+				text-decoration: none;
+				color: #8895A6;
+			}
+		}
+	}
 }
+
 //*****************************************
 //--------------------MENU-----------------
 //*****************************************
 .bg-menu{
-	background-color: rgba(28, 67, 136, 1.0);
 	height: 64px;
   	display: flex;
   	align-items: center;
@@ -40,12 +52,12 @@ body{;
 }
 .menu{
 
-	background-color: #1C4388;
+	background-color: transparent;
 	.current-menu-item,
 	.current_page_item{
 		a{
 			text-decoration: underline;
-			color: #f3f7f6;
+			color: #8895A6;
 			font-size: 15.6px;
 			font-weight: 500;
 		}
@@ -57,7 +69,7 @@ body{;
 		a{
 			margin-left: 40px;
 			font-family: 'Lato';
-			color: #f3f7f6;
+			color: #8895A6;
 			font-size: 15.6px;
 			font-weight: 500;
 			&:first-of-child{
