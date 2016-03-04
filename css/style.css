@@ -2,7 +2,7 @@
  * In this file you should write your main styles. (or centralize your imports)
  * Import this file using the following HTML or equivalent:
  * <link href="/stylesheets/screen.css" media="screen, projection" rel="stylesheet" type="text/css" /> */
-@import url(https://fonts.googleapis.com/css?family=Lato);
+@import url(https://fonts.googleapis.com/css?family=Lato:400,700);
 /* line 5, ../../../../../../../Ruby22-x64/lib/ruby/gems/2.2.0/gems/compass-core-1.0.3/stylesheets/compass/reset/_utilities.scss */
 html, body, div, span, applet, object, iframe,
 h1, h2, h3, h4, h5, h6, p, blockquote, pre,
@@ -337,18 +337,24 @@ th {
 }
 
 /* line 11, ../sass/style.scss */
+a, button, input[type="button"], input[type="submit"] {
+  transition: border-color .3s ease-in, color .4s ease-in, background-color .3s ease-in;
+}
+
+/* line 19, ../sass/style.scss */
 body {
   font-family: 'Lato';
   color: #8895A6;
 }
-/* line 14, ../sass/style.scss */
+/* line 22, ../sass/style.scss */
 body a {
   text-decoration: none;
   color: #E4F5FC;
 }
 
-/* line 22, ../sass/style.scss */
+/* line 30, ../sass/style.scss */
 .header_bg {
+  background-color: #3A3E47;
   background-image: url("../images/bg_img_science.jpg");
   repeat: no-repeat;
   width: 100%;
@@ -357,20 +363,27 @@ body a {
   -o-background-size: cover;
   -ms-background-size: cover;
   -moz-background-size: cover;
+  background-position: center center;
   position: relative;
   height: 100vh;
 }
-/* line 33, ../sass/style.scss */
+/* line 43, ../sass/style.scss */
 .header_bg .logo {
   font-size: 250%;
 }
-/* line 36, ../sass/style.scss */
+/* line 46, ../sass/style.scss */
 .header_bg .logo a:hover {
   text-decoration: none;
   color: #8895A6;
 }
 
-/* line 47, ../sass/style.scss */
+@media screen and (max-width: 991px) {
+  /* line 54, ../sass/style.scss */
+  .logo {
+    text-align: center;
+  }
+}
+/* line 61, ../sass/style.scss */
 .bg-menu {
   height: 64px;
   display: flex;
@@ -378,25 +391,16 @@ body a {
   justify-content: center;
 }
 
-/* line 53, ../sass/style.scss */
+/* line 67, ../sass/style.scss */
 .menu {
-  background-color: transparent;
   display: inline-block;
   margin-top: 10px;
 }
-/* line 58, ../sass/style.scss */
-.menu .current-menu-item a,
-.menu .current_page_item a {
-  text-decoration: underline;
-  color: #8895A6;
-  font-size: 15.6px;
-  font-weight: 500;
-}
-/* line 67, ../sass/style.scss */
+/* line 70, ../sass/style.scss */
 .menu li {
   float: left;
 }
-/* line 69, ../sass/style.scss */
+/* line 72, ../sass/style.scss */
 .menu li a {
   margin-left: 40px;
   font-family: 'Lato';
@@ -404,139 +408,120 @@ body a {
   font-size: 15.6px;
   font-weight: 500;
 }
-/* line 75, ../sass/style.scss */
+/* line 78, ../sass/style.scss */
 .menu li a:first-of-child {
   margin-left: 0;
 }
-/* line 78, ../sass/style.scss */
+/* line 81, ../sass/style.scss */
 .menu li a:hover {
   color: #fff;
   text-decoration: underline;
 }
 
-/* line 89, ../sass/style.scss */
-.site-footer {
-  background-color: #000;
-  height: 240px;
-  color: #fff;
+/* line 91, ../sass/style.scss */
+.about_project, .portfolio-info, .contact-info {
+  padding-top: 30px;
 }
 /* line 93, ../sass/style.scss */
-.site-footer p {
-  margin-left: auto;
-  margin-right: auto;
-  width: 59em;
+.about_project h2, .portfolio-info h2, .contact-info h2 {
+  font-size: 200%;
+  font-weight: 700;
 }
-/* line 98, ../sass/style.scss */
-.site-footer .copyright {
-  padding-top: 20px;
-  font-family: 'Lato';
-  font-size: 13.47px;
-  font-weight: 400;
-  line-height: 19px;
+/* line 97, ../sass/style.scss */
+.about_project p:first-of-type, .portfolio-info p:first-of-type, .contact-info p:first-of-type {
+  padding-bottom: 30px;
 }
 
-/* line 106, ../sass/style.scss */
-.footer_image_folder {
-  padding-top: 34px;
-  padding-bottom: 20px;
+/* line 101, ../sass/style.scss */
+.image-folder {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 500px;
+  height: 400px;
+  background-color: #F4F4F4;
+  margin-bottom: 30px;
+}
+/* line 109, ../sass/style.scss */
+.image-folder img {
+  width: 80%;
+  height: 80%;
 }
 
 /* line 114, ../sass/style.scss */
-article.page h2 {
-  font-size: 200%;
-}
-
-/* line 121, ../sass/style.scss */
-.learnmore_bg {
-  min-height: 416px;
-  background-image: url("images/LearnmoreBG.png");
-  background-repeat: no-repeat;
-  background-size: cover;
-  text-align: center;
+.description-folder {
+  display: flex;
   align-items: center;
   justify-content: center;
+  width: 500px;
+  height: 400px;
+  background-color: #343841;
+  color: #E1F4FA;
+  padding: 10%;
 }
-/* line 129, ../sass/style.scss */
-.learnmore_bg h1 {
-  color: #f3f7f6;
-  font-size: 45.35px;
-  font-weight: 500;
+/* line 123, ../sass/style.scss */
+.description-folder h3 {
+  font-size: 150%;
+  margin-right: 5%;
   text-transform: uppercase;
-  padding-top: 35px;
+  border-bottom: 1px solid #39c9da;
+}
+
+/* line 131, ../sass/style.scss */
+.portfolio {
+  background-color: #FAFAFA;
+}
+
+/* line 134, ../sass/style.scss */
+.portfolio-info {
+  text-align: center;
 }
 /* line 136, ../sass/style.scss */
-.learnmore_bg h3 {
-  color: #f3f7f6;
-  font-size: 24.94px;
-  font-weight: 400;
-  padding-bottom: 20px;
+.portfolio-info h2 {
+  text-transform: uppercase;
+  font-size: 200%;
+  font-weight: 700;
 }
+
 /* line 142, ../sass/style.scss */
-.learnmore_bg button {
-  color: #f3f7f6;
-  font-size: 17.01px;
-  font-weight: 500;
-  line-height: 11px;
-  border-radius: none;
-  border: 2px solid #f3f7f6;
-  background: transparent;
-  padding: 20px 30px;
-}
-/* line 152, ../sass/style.scss */
-.learnmore_bg button:hover p {
-  text-decoration: underline;
-}
-/* line 156, ../sass/style.scss */
-.learnmore_bg button p {
-  text-transform: uppercase;
-  margin-left: auto;
-  margin-right: auto;
-  width: 3em;
-  line-height: 20px;
+.camera {
+  background: url("../images/icons.png") no-repeat 0px 0px;
+  width: 40px;
+  height: 34px;
+  display: block;
+  margin: 0 auto;
 }
 
-/* line 167, ../sass/style.scss */
-.benefits h2 {
-  font-family: 'Lato';
-  color: #1e4388;
-  font-size: 30px;
-  font-weight: 500;
-  text-transform: uppercase;
-  padding: 50px 0;
+/* line 149, ../sass/style.scss */
+.portfolio-image {
+  border: 1px solid #e8e8e8;
+  padding: 20px;
+  background: #ffffff;
 }
 
-/* line 180, ../sass/style.scss */
-.kiio-widget .textwidget {
-  margin-left: auto;
-  margin-right: auto;
-  width: 10em;
-  margin-bottom: 50px;
-}
-/* line 187, ../sass/style.scss */
-.kiio-widget .widget-item h4 {
-  font-family: 'Lato';
-  color: #1e4388;
-  font-size: 18px;
+/* line 154, ../sass/style.scss */
+.port-info h2 {
   text-transform: uppercase;
-  margin-bottom: 25px;
-}
-
-/* line 196, ../sass/style.scss */
-.image-folder {
-  margin: auto;
-  display: flex;
   text-align: center;
-  align-items: center;
-  justify-content: center;
-  height: 28px;
-  width: 28px;
-  border-radius: 50%;
-  background-color: #174187;
-  margin-bottom: 30px;
+  font-size: 22px;
+  padding: 15px 0;
+  font-weight: 600;
+  color: #504f50;
 }
 
-/* line 211, ../sass/style.scss */
-.achievement-bg {
-  background-color: #174187;
-  height: 277px;
+/* line 162, ../sass/style.scss */
+.port-info p {
+  font-size: 14px;
+  padding-top: 12px;
+  color: #504f50;
+  text-align: center;
+}
+
+/* line 168, ../sass/style.scss */
+.contact {
+  background-color: #E3F6FC;
+}
+/* line 170, ../sass/style.scss */
+.contact ul {
+  padding-top: 30px;
 }

@@ -5,7 +5,15 @@
 
 @import "compass/reset";
 @import "normalize";
-@import url(https://fonts.googleapis.com/css?family=Lato);
+@import url(https://fonts.googleapis.com/css?family=Lato:400,700);
+//*********************************************************
+//*********************************************************
+a,button, input[type="button"], input[type="submit"] {
+	transition:
+	border-color .3s ease-in,
+	color .4s ease-in,
+	background-color .3s ease-in;
+}
 //*********************************************************
 //*********************************************************
 body{
@@ -20,14 +28,16 @@ body{
 //--------------------HEADER-----------------
 //*****************************************
 .header_bg{
+	background-color: #3A3E47;
 	background-image: url("../images/bg_img_science.jpg");
 	repeat: no-repeat;
 	width: 100%;
 	background-size:cover;
 	-webkit-background-size: cover;
-	-o-background-size: cover;
-	-ms-background-size: cover;
-	-moz-background-size: cover;
+		-o-background-size: cover;
+			-ms-background-size: cover;
+				-moz-background-size: cover;
+	background-position: center center;
 	position: relative;
 	height: 100vh;
 	.logo{
@@ -40,7 +50,11 @@ body{
 		}
 	}
 }
-
+@media  screen and (max-width: 991px) {
+	.logo{
+		text-align: center;
+	}
+}
 //*****************************************
 //--------------------MENU-----------------
 //*****************************************
@@ -51,17 +65,6 @@ body{
   	justify-content: center;
 }
 .menu{
-
-	background-color: transparent;
-	.current-menu-item,
-	.current_page_item{
-		a{
-			text-decoration: underline;
-			color: #8895A6;
-			font-size: 15.6px;
-			font-weight: 500;
-		}
-	}
 	display: inline-block;
 	margin-top: 10px;
 	li{
@@ -83,132 +86,88 @@ body{
 	}
 }
 //*****************************************
-//--------------------FOOTER-----------------
+//--------------------ABOUT PROJECT-----------------
 //*****************************************
-
-.site-footer{
-	background-color: #000;
-	height: 240px;
-	color: #fff;
-	p{
-		margin-left: auto;
-	    margin-right: auto;
-	    width: 59em;
-	}
-	.copyright{
-		padding-top: 20px;
-		font-family: 'Lato';
-		font-size: 13.47px;
-		font-weight: 400;
-		line-height: 19px;
-	}
-}
-.footer_image_folder{
-	padding-top: 34px;
-	padding-bottom: 20px;
-}
-//*****************************************
-//--------------------PAGE-----------------
-//*****************************************
-article.page{
-		h2{
-			font-size: 200%;
-		}
-}
-//*****************************************
-//--------------FRONT-PAGE-----------------
-//*****************************************
-.learnmore_bg{
-	min-height: 416px;
-	background-image: url("images/LearnmoreBG.png");
-	background-repeat: no-repeat;
-	background-size: cover;
-	text-align: center;
-	align-items: center;
-	justify-content: center;
-	h1{
-		color: #f3f7f6;
-		font-size: 45.35px;
-		font-weight: 500;
-		text-transform: uppercase;
-		padding-top: 35px;
-	}
-	h3{
-		color: #f3f7f6;
-		font-size: 24.94px;
-		font-weight: 400;
-		padding-bottom: 20px;
-	}
-	button{
-			color: rgba(243, 247, 246, 1.0);
-			font-size: 17.01px;
-			font-weight: 500;
-			line-height: 11px;
-			border-radius: none;
-			border: 2px solid rgba(243, 247, 246, 1.0);
-			background: transparent;
-			padding: 20px 30px;
-			&:hover{
-					p{
-						text-decoration: underline;
-					}
-				}
-			p{
-				text-transform: uppercase;
-				margin-left: auto;
-				margin-right: auto;
-				width: 3em;
-				line-height: 20px;
-			}
-	}
-}
-
-.benefits{
+.about_project, .portfolio-info, .contact-info{
+	padding-top: 30px;
 	h2{
-		font-family: 'Lato';
-		color: #1e4388;
-		font-size: 30px;
-		font-weight: 500;
-		text-transform: uppercase;
-		padding: 50px 0;
+		font-size: 200%;
+		font-weight: 700;
 	}
-}
-//*****************************************
-//--------------WIDGETS-----------------
-//*****************************************
-.kiio-widget{
-	.textwidget{
-		margin-left: auto;
-	    margin-right: auto;
-	    width: 10em;
-		margin-bottom: 50px;
-	}
-	.widget-item{
-		h4{
-			font-family: 'Lato';
-			color: #1e4388;
-			font-size: 18px;
-			text-transform: uppercase;
-			margin-bottom: 25px;
-		}
+	p:first-of-type{
+		padding-bottom: 30px;
 	}
 }
 .image-folder{
-	margin: auto;
 	display: flex;
-	text-align: center;
 	align-items: center;
 	justify-content: center;
-	height: 28px;
-	width: 28px;
-	border-radius: 50%;
-	background-color: #174187;
+	width: 500px;
+	height: 400px;
+	background-color: #F4F4F4;
 	margin-bottom: 30px;
+	img{
+		width: 80%;
+		height: 80%;
+	}
 }
-//*****************************************
-//--------------ACHIEVEMENT-----------------
-//*****************************************
-.achievement-bg{
-	background-color: #174187;
-	height: 277px;
+.description-folder{
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	width: 500px;
+	height: 400px;
+	background-color: #343841;
+	color: #E1F4FA;
+	padding: 10%;
+	h3{
+		font-size: 150%;
+		margin-right: 5%;
+		text-transform: uppercase;
+		border-bottom: 1px solid #39c9da;
+	}
+}
+
+.portfolio{
+	background-color: #FAFAFA;
+}
+.portfolio-info{
+	text-align: center;
+	h2{
+		text-transform: uppercase;
+		font-size: 200%;
+		font-weight: 700;
+	}
+}
+.camera {
+	background:url("../images/icons.png") no-repeat 0px 0px;
+	width:40px;
+	height:34px;
+	display:block;
+	margin:0 auto;
+	}
+.portfolio-image{
+	border:1px solid #e8e8e8;
+	padding:20px;
+	background:#ffffff;
+	}
+.port-info h2{
+	text-transform: uppercase;
+	text-align: center;
+	font-size: 22px;
+	padding:15px 0;
+	font-weight: 600;
+	color: #504f50;
+	}
+.port-info p{
+	font-size: 14px;
+	padding-top:12px;
+	color: #504f50;
+	text-align: center;
+	}
+.contact{
+	background-color: #E3F6FC;
+	ul{
+		padding-top: 30px;
+	}
 }
